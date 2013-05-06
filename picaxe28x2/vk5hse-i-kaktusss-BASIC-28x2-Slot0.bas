@@ -374,11 +374,7 @@ WPMadjust:
 
 
 MenuSystem:
-	let SOUNDING = 0
-	let ASCII_CHAR = "&"
-	gosub SoundThenDrawASCIIchar
-	goto MenuSystem
-	
+	let SOUNDING = 0    REM muting keyer while using menu speeds things up 
 	for b9 = 0 to 15    REM equals length-1 of text string being generated
 		lookup b9,("Keyer mode is:  "),ASCII_CHAR
 		gosub SoundThenDrawASCIIchar
